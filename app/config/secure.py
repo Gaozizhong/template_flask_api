@@ -11,7 +11,19 @@ class DevelopmentSecure(BaseConfig):
     """
     开发环境安全性配置
     """
+    # Mongo配置
+    MONGODB_PORT = 27017
+    MONGODB_HOST = "192.168.0.145"
+    MONGODB_DB = "JC_SYSTEM"
+    # MONGODB_USERNAME = "root"
+    # MONGODB_PASSWORD = "root"
+
     SQLALCHEMY_DATABASE_URI = 'mysql+cymysql://root:123456@localhost:3306/lin-cms'
+
+    # SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:abc123@192.168.0.145:5432/jc_system'
+    # SQLALCHEMY_BINDS = {
+    #     'users': 'mysql+cymysql://root:abc123456@192.168.0.145:3306/jc_system',
+    # }
 
     SQLALCHEMY_ECHO = False
 
@@ -22,7 +34,19 @@ class ProductionSecure(BaseConfig):
     """
     生产环境安全性配置
     """
+    # Mongo配置
+    MONGODB_PORT = 27017
+    MONGODB_HOST = "192.168.0.145"
+    MONGODB_DB = "JC_SYSTEM"
+    # MONGODB_USERNAME = "root"
+    # MONGODB_PASSWORD = "root"
+
     SQLALCHEMY_DATABASE_URI = 'mysql+cymysql://root:123456@localhost:3306/lin-cms'
+
+    # SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:abc123@192.168.0.145:5432/jc_system'
+    # SQLALCHEMY_BINDS = {
+    #     'users': 'mysql+cymysql://root:abc123456@192.168.0.145:3306/jc_system',
+    # }
 
     SQLALCHEMY_ECHO = False
 
